@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ment. — Tu cerebro, organizado por IA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --purple: #7C6FF7;
+      --purple-light: #EEF0FE;
+      --text: #1A1A1A;
+      --muted: #6B6866;
+      --border: #EBEBEB;
+      --bg: #F9F8F5;
+    }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .wordmark {
+      font-size: 48px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      margin-bottom: 16px;
+    }
+    .wordmark span { color: var(--purple); }
+    .tagline {
+      font-size: 18px;
+      color: var(--muted);
+      margin-bottom: 48px;
+    }
+    .links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 12px 24px;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      border: 1px solid var(--border);
+      background: white;
+      color: var(--text);
+      transition: all 0.2s;
+    }
+    .link:hover { border-color: var(--purple); color: var(--purple); }
+    .link.primary {
+      background: var(--purple);
+      color: white;
+      border-color: var(--purple);
+    }
+    .link.primary:hover { opacity: 0.9; }
+  </style>
+</head>
+<body>
+  <div class="wordmark">ment<span>.</span></div>
+  <p class="tagline">Tu cerebro, organizado por IA</p>
+  <div class="links">
+    <a href="/privacy.html" class="link">🔒 Privacidad</a>
+    <a href="/terms.html" class="link">📋 Términos</a>
+    <a href="/support.html" class="link primary">💬 Soporte</a>
+  </div>
+</body>
+</html>

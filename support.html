@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soporte — ment.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --purple: #7C6FF7;
+      --purple-light: #EEF0FE;
+      --text: #1A1A1A;
+      --muted: #6B6866;
+      --border: #EBEBEB;
+      --bg: #F9F8F5;
+      --card: #fff;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(249,248,245,0.9);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .wordmark {
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+    .wordmark span { color: var(--purple); }
+
+    nav a {
+      font-size: 14px;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    nav a:hover { color: var(--purple); }
+
+    .hero {
+      padding: 64px 40px 40px;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--purple-light);
+      color: var(--purple);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      padding: 5px 12px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(28px, 5vw, 40px);
+      font-weight: 600;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      color: var(--muted);
+      margin-bottom: 48px;
+    }
+
+    .content {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 40px 80px;
+    }
+
+    .contact-main {
+      background: var(--purple);
+      border-radius: 20px;
+      padding: 40px;
+      color: white;
+      margin-bottom: 32px;
+      text-align: center;
+    }
+
+    .contact-main h2 {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: white;
+    }
+
+    .contact-main p {
+      font-size: 15px;
+      opacity: 0.85;
+      margin-bottom: 24px;
+    }
+
+    .email-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: white;
+      color: var(--purple);
+      font-size: 15px;
+      font-weight: 600;
+      padding: 14px 28px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .email-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    }
+
+    .faq-section h2 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: var(--text);
+    }
+
+    .faq-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px 28px;
+      margin-bottom: 12px;
+    }
+
+    .faq-q {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .faq-a {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .faq-a a {
+      color: var(--purple);
+      text-decoration: none;
+    }
+
+    .response-time {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: #E8F5EE;
+      border: 1px solid #9FE1CB;
+      border-radius: 12px;
+      padding: 14px 20px;
+      margin-top: 24px;
+    }
+
+    .response-time p {
+      font-size: 14px;
+      color: #0F6E56;
+      font-weight: 500;
+      margin: 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 32px 40px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    footer a { color: var(--purple); text-decoration: none; }
+
+    @media (max-width: 600px) {
+      nav, .hero, .content { padding-left: 20px; padding-right: 20px; }
+      .contact-main { padding: 28px 20px; }
+      .faq-item { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="wordmark">ment<span>.</span></a>
+  <a href="/privacy.html">Privacidad</a>
+</nav>
+
+<div class="hero">
+  <div class="badge">💬 Soporte</div>
+  <h1>¿En qué te ayudamos?</h1>
+  <p class="subtitle">Estamos aquí para resolver tus dudas sobre ment.</p>
+</div>
+
+<div class="content">
+
+  <div class="contact-main">
+    <h2>Escríbenos directamente</h2>
+    <p>Para cualquier pregunta, bug o sugerencia, nuestro equipo responde personalmente.</p>
+    <a href="mailto:eric@sugoi.mx" class="email-btn">
+      ✉️ eric@sugoi.mx
+    </a>
+    <div class="response-time" style="margin-top: 24px; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.2);">
+      <p style="color: white; opacity: 0.9;">⚡ Respondemos en menos de 24 horas</p>
+    </div>
+  </div>
+
+  <div class="faq-section">
+    <h2>Preguntas frecuentes</h2>
+
+    <div class="faq-item">
+      <p class="faq-q">¿Cómo funciona el brain dump?</p>
+      <p class="faq-a">Escribe todo lo que tienes en la cabeza sin orden ni estructura. Ment usa IA para leer tu texto y convertirlo automáticamente en tareas organizadas con fecha, categoría y prioridad.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">¿Qué incluye el plan gratuito?</p>
+      <p class="faq-a">El plan gratuito incluye 5 brain dumps por día y hasta 2 listas. Para uso ilimitado, entrada por voz y el Dashboard PRO, puedes suscribirte al plan PRO por $4.99/mes.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">¿Cómo cancelo mi suscripción PRO?</p>
+      <p class="faq-a">Puedes cancelar en cualquier momento desde <strong>App Store → Tu cuenta → Suscripciones → ment.</strong> Tu acceso PRO se mantiene hasta el final del período pagado.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">¿Mis datos están seguros?</p>
+      <p class="faq-a">Sí. Tus datos se almacenan con cifrado en tránsito y en reposo. No vendemos tu información a terceros. Lee nuestra <a href="/privacy.html">Política de Privacidad</a> para más detalles.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">¿Cómo sincronizo con Google Calendar?</p>
+      <p class="faq-a">Ve a <strong>Ajustes → Integraciones → Conectar Google Calendar</strong>. Una vez conectado, todas las tareas con fecha se sincronizarán automáticamente.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">¿Cómo elimino mi cuenta?</p>
+      <p class="faq-a">Ve a <strong>Ajustes → Tu perfil → Eliminar mi cuenta</strong>. Esta acción es permanente y elimina todos tus datos en un plazo de 30 días.</p>
+    </div>
+
+  </div>
+
+</div>
+
+<footer>
+  © 2025 Sugoi · <a href="/privacy.html">Privacidad</a> · <a href="/terms.html">Términos</a>
+</footer>
+
+</body>
+</html>
