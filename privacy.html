@@ -1,268 +1,498 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Política de Privacidad — ment.</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Política de Privacidad — ment.</title>
+<meta name="description" content="Política de privacidad de ment. Cómo recopilamos, usamos y protegemos tu información, incluida la integración con Google Calendar." />
+<meta name="theme-color" content="#F5F1EA" />
 
-    :root {
-      --purple: #7C6FF7;
-      --purple-light: #EEF0FE;
-      --text: #1A1A1A;
-      --muted: #6B6866;
-      --border: #EBEBEB;
-      --bg: #F9F8F5;
-      --card: #fff;
-    }
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=DM+Sans:opsz,wght@9..40,300..700&display=swap" rel="stylesheet" />
 
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-      min-height: 100vh;
-    }
+<style>
+  :root {
+    --cream: #F5F1EA;
+    --cream-deep: #ECE6D8;
+    --cream-line: #E0D9C7;
+    --ink: #1A1B23;
+    --ink-soft: #4A4B5A;
+    --ink-faint: #8A8B98;
+    --purple: #7C7CF0;
+    --purple-deep: #5A5AD8;
+    --purple-soft: #E8E8FB;
+  }
 
-    nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 20px 40px;
-      border-bottom: 1px solid var(--border);
-      background: rgba(249,248,245,0.9);
-      backdrop-filter: blur(12px);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
 
-    .wordmark {
-      font-size: 22px;
-      font-weight: 600;
-      color: var(--text);
-      text-decoration: none;
-      letter-spacing: -0.5px;
-    }
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
 
-    .wordmark span { color: var(--purple); }
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.3;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.18'/%3E%3C/svg%3E");
+  }
 
-    nav a {
-      font-size: 14px;
-      color: var(--muted);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    nav a:hover { color: var(--purple); }
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 2;
+  }
 
-    .hero {
-      padding: 64px 40px 40px;
-      max-width: 720px;
-      margin: 0 auto;
-    }
+  /* Nav */
+  nav {
+    padding: 28px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--cream-line);
+    margin-bottom: 60px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Fraunces', serif;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .brand-logo {
+    width: 28px; height: 28px;
+    background: var(--purple);
+    border-radius: 7px;
+    display: grid; place-items: center;
+  }
+  .brand-logo svg { width: 18px; height: 18px; }
+  .nav-back {
+    color: var(--ink-soft);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .nav-back:hover { color: var(--ink); }
 
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: var(--purple-light);
-      color: var(--purple);
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      padding: 5px 12px;
-      border-radius: 20px;
-      margin-bottom: 20px;
-    }
+  /* Header */
+  .doc-header {
+    margin-bottom: 56px;
+  }
+  .doc-kicker {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--purple-deep);
+    margin-bottom: 18px;
+  }
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(40px, 6vw, 64px);
+    line-height: 1.0;
+    letter-spacing: -0.025em;
+    font-weight: 400;
+    font-variation-settings: 'opsz' 96;
+    margin-bottom: 24px;
+  }
+  h1 em {
+    font-style: italic;
+    color: var(--purple-deep);
+    font-weight: 300;
+  }
+  .doc-meta {
+    color: var(--ink-faint);
+    font-size: 14px;
+    padding-top: 20px;
+    border-top: 1px solid var(--cream-line);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
 
-    h1 {
-      font-size: clamp(28px, 5vw, 40px);
-      font-weight: 600;
-      letter-spacing: -0.5px;
-      line-height: 1.2;
-      margin-bottom: 12px;
-    }
+  /* Body */
+  article {
+    padding-bottom: 100px;
+  }
+  article p {
+    margin-bottom: 18px;
+    color: var(--ink-soft);
+  }
+  article h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    margin-top: 56px;
+    margin-bottom: 18px;
+    padding-top: 32px;
+    border-top: 1px solid var(--cream-line);
+    color: var(--ink);
+  }
+  article h2:first-of-type { margin-top: 0; padding-top: 0; border-top: none; }
+  article h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 21px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    margin-top: 32px;
+    margin-bottom: 12px;
+    color: var(--ink);
+  }
+  article ul {
+    margin-bottom: 20px;
+    padding-left: 0;
+    list-style: none;
+  }
+  article ul li {
+    padding: 6px 0 6px 24px;
+    position: relative;
+    color: var(--ink-soft);
+  }
+  article ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--purple-deep);
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+  }
+  article a {
+    color: var(--purple-deep);
+    text-decoration: underline;
+    text-decoration-color: var(--cream-line);
+    text-underline-offset: 3px;
+    transition: text-decoration-color 0.2s;
+  }
+  article a:hover {
+    text-decoration-color: var(--purple-deep);
+  }
+  article strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+  article code {
+    font-family: 'SF Mono', Menlo, monospace;
+    background: var(--cream-deep);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.88em;
+    color: var(--ink);
+    word-break: break-all;
+  }
 
-    .updated {
-      font-size: 13px;
-      color: var(--muted);
-      margin-bottom: 48px;
-    }
+  /* Limited use callout - special highlighted box */
+  .callout {
+    background: var(--cream-deep);
+    border-left: 3px solid var(--purple);
+    padding: 24px 28px;
+    border-radius: 0 12px 12px 0;
+    margin: 24px 0;
+  }
+  .callout-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--purple-deep);
+    margin-bottom: 10px;
+  }
+  .callout p {
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+  .callout p:last-child { margin-bottom: 0; }
+  .callout em.lang {
+    font-style: normal;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    display: block;
+    margin-top: 14px;
+    margin-bottom: 4px;
+  }
 
-    .content {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 0 40px 80px;
-    }
+  /* Footer */
+  footer {
+    padding: 40px 0;
+    border-top: 1px solid var(--cream-line);
+    color: var(--ink-faint);
+    font-size: 13px;
+    text-align: center;
+  }
+  footer a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    margin: 0 12px;
+  }
+  footer a:hover { color: var(--purple-deep); }
 
-    section {
-      margin-bottom: 40px;
-      background: var(--card);
-      border-radius: 16px;
-      padding: 28px 32px;
-      border: 1px solid var(--border);
-    }
+  /* TOC */
+  .toc {
+    background: var(--cream-deep);
+    border: 1px solid var(--cream-line);
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin-bottom: 56px;
+  }
+  .toc-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin-bottom: 16px;
+  }
+  .toc ol {
+    list-style: none;
+    counter-reset: toc;
+  }
+  .toc ol li {
+    counter-increment: toc;
+    padding: 4px 0;
+    font-size: 14px;
+  }
+  .toc ol li::before {
+    content: counter(toc, decimal-leading-zero) ". ";
+    color: var(--purple-deep);
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    margin-right: 8px;
+  }
+  .toc a {
+    color: var(--ink-soft);
+    text-decoration: none;
+  }
+  .toc a:hover { color: var(--ink); }
 
-    h2 {
-      font-size: 16px;
-      font-weight: 600;
-      color: var(--purple);
-      margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    h2::before {
-      content: '';
-      display: inline-block;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--purple);
-      flex-shrink: 0;
-    }
-
-    p { font-size: 15px; color: var(--muted); margin-bottom: 12px; }
-    p:last-child { margin-bottom: 0; }
-
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 8px 0 0;
-    }
-
-    ul li {
-      font-size: 15px;
-      color: var(--muted);
-      padding: 6px 0;
-      padding-left: 20px;
-      position: relative;
-    }
-
-    ul li::before {
-      content: '→';
-      position: absolute;
-      left: 0;
-      color: var(--purple);
-      font-size: 13px;
-    }
-
-    .contact-card {
-      background: var(--purple-light);
-      border: 1px solid rgba(124,111,247,0.2);
-      border-radius: 16px;
-      padding: 24px 32px;
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .contact-card a {
-      color: var(--purple);
-      font-weight: 500;
-      text-decoration: none;
-    }
-
-    footer {
-      text-align: center;
-      padding: 32px 40px;
-      border-top: 1px solid var(--border);
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    footer a { color: var(--purple); text-decoration: none; }
-
-    @media (max-width: 600px) {
-      nav, .hero, .content { padding-left: 20px; padding-right: 20px; }
-      section { padding: 20px; }
-    }
-  </style>
+</style>
 </head>
 <body>
 
-<nav>
-  <a href="/" class="wordmark">ment<span>.</span></a>
-  <a href="/terms.html">Términos</a>
-</nav>
+<div class="wrap">
+  <nav>
+    <a href="https://ment-ai.app" class="brand">
+      <span class="brand-logo">
+        <svg viewBox="0 0 100 100" fill="none">
+          <path d="M20 30 Q20 20 30 20 L70 20 Q80 20 80 30 L80 70 Q80 80 70 80 L30 80 Q20 80 20 70 Z" stroke="white" stroke-width="6" fill="none"/>
+          <path d="M30 35 Q42 28 50 38 Q42 50 35 48" stroke="white" stroke-width="5" stroke-linecap="round" fill="none"/>
+          <path d="M70 35 Q58 28 50 42" stroke="white" stroke-width="5" stroke-linecap="round" fill="none"/>
+          <path d="M35 65 Q45 58 52 62" stroke="white" stroke-width="5" stroke-linecap="round" fill="none"/>
+          <path d="M65 65 Q55 70 50 62" stroke="white" stroke-width="5" stroke-linecap="round" fill="none"/>
+        </svg>
+      </span>
+      ment.
+    </a>
+    <a href="https://ment-ai.app" class="nav-back">← Volver al sitio</a>
+  </nav>
 
-<div class="hero">
-  <div class="badge">🔒 Privacidad</div>
-  <h1>Política de Privacidad</h1>
-  <p class="updated">Última actualización: abril de 2025</p>
-</div>
-
-<div class="content">
-
-  <section>
-    <h2>Información que recopilamos</h2>
-    <p>Recopilamos la información que tú nos proporcionas directamente:</p>
-    <ul>
-      <li>Tu dirección de correo electrónico al crear una cuenta</li>
-      <li>El texto que ingresas en los brain dumps para procesarlo con IA</li>
-      <li>Las tareas y listas que creas dentro de la app</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Cómo usamos tu información</h2>
-    <p>Usamos tu información para:</p>
-    <ul>
-      <li>Proveer y mejorar el servicio</li>
-      <li>Procesar tus brain dumps con inteligencia artificial (Claude de Anthropic)</li>
-      <li>Enviar notificaciones de recordatorio que tú configuras</li>
-      <li>Sincronizar con Google Calendar si lo autorizas</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Compartir información</h2>
-    <p>No vendemos tu información personal. Compartimos datos únicamente con los proveedores necesarios para operar el servicio:</p>
-    <ul>
-      <li>Anthropic — procesamiento de IA para brain dumps</li>
-      <li>Supabase — almacenamiento seguro de datos</li>
-      <li>RevenueCat — gestión de suscripciones</li>
-      <li>Google — sincronización de calendario, solo si lo autorizas</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Seguridad</h2>
-    <p>Tus datos se almacenan de forma segura con cifrado en tránsito y en reposo a través de Supabase. Tomamos la seguridad de tu información muy en serio.</p>
-  </section>
-
-  <section>
-    <h2>Tus derechos</h2>
-    <p>Puedes eliminar tu cuenta y todos tus datos en cualquier momento desde <strong>Ajustes → Tu perfil → Eliminar mi cuenta</strong>. Al hacerlo, todos tus datos serán eliminados permanentemente en un plazo de 30 días.</p>
-  </section>
-
-  <section>
-    <h2>Menores de edad</h2>
-    <p>ment. no está dirigido a personas menores de 13 años y no recopilamos conscientemente información de menores. Si eres padre o tutor y crees que tu hijo nos ha proporcionado información, contáctanos.</p>
-  </section>
-
-  <section>
-    <h2>Cambios a esta política</h2>
-    <p>Notificaremos cambios importantes por correo electrónico o dentro de la app con al menos 7 días de anticipación.</p>
-  </section>
-
-  <div class="contact-card">
-    <div style="font-size: 28px;">✉️</div>
-    <div>
-      <p style="margin:0; font-size:14px; font-weight:600; color:#1A1A1A;">¿Preguntas sobre privacidad?</p>
-      <a href="mailto:eric@sugoi.mx">eric@sugoi.mx</a>
+  <header class="doc-header">
+    <div class="doc-kicker">Documento Legal</div>
+    <h1>Política de <em>Privacidad</em></h1>
+    <div class="doc-meta">
+      <span>Última actualización: 3 de mayo de 2026</span>
+      <span>Vigente desde: 3 de mayo de 2026</span>
     </div>
-  </div>
+  </header>
 
+  <article>
+
+    <div class="toc">
+      <div class="toc-label">Contenido</div>
+      <ol>
+        <li><a href="#intro">Introducción</a></li>
+        <li><a href="#data-collected">Información que recopilamos</a></li>
+        <li><a href="#how-we-use">Cómo usamos tu información</a></li>
+        <li><a href="#google">Integración con Google Calendar</a></li>
+        <li><a href="#third-parties">Servicios de terceros</a></li>
+        <li><a href="#retention">Retención y eliminación</a></li>
+        <li><a href="#rights">Tus derechos</a></li>
+        <li><a href="#security">Seguridad</a></li>
+        <li><a href="#children">Menores de edad</a></li>
+        <li><a href="#changes">Cambios a esta política</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ol>
+    </div>
+
+    <h2 id="intro">1. Introducción</h2>
+    <p>ment. (la "Aplicación") es operada por <strong>Sugoi</strong> ("nosotros", "nuestro" o "Sugoi"), con sede en México. Esta Política de Privacidad explica qué información recopilamos cuando usas ment., cómo la usamos, con quién la compartimos y los derechos que tienes sobre ella.</p>
+    <p>Al usar ment., aceptas las prácticas descritas en este documento. Si no estás de acuerdo, te pedimos que no uses la Aplicación.</p>
+
+    <h2 id="data-collected">2. Información que recopilamos</h2>
+
+    <h3>Información de la cuenta</h3>
+    <p>Cuando creas una cuenta — ya sea con Apple Sign In, Google Sign In o correo electrónico — recopilamos:</p>
+    <ul>
+      <li>Tu correo electrónico</li>
+      <li>Tu nombre o nombre para mostrar (si decides proporcionarlo)</li>
+      <li>Un identificador único de cuenta generado por nuestro proveedor de autenticación (Supabase)</li>
+    </ul>
+
+    <h3>Contenido que tú creas</h3>
+    <p>ment. almacena el contenido que generas dentro de la Aplicación, incluyendo:</p>
+    <ul>
+      <li>Tareas, recordatorios, listas y notas</li>
+      <li>Transcripciones de notas de voz que decides grabar</li>
+      <li>Categorías, fechas y prioridades asociadas a tu contenido</li>
+      <li>Preferencias de la Aplicación (tema, idioma, configuración de notificaciones)</li>
+    </ul>
+
+    <h3>Información de uso técnico</h3>
+    <p>Para mantener la Aplicación funcionando correctamente, recopilamos información técnica básica como tipo de dispositivo, sistema operativo, identificadores de instalación y registros de errores. No usamos servicios de analítica de terceros que rastreen comportamiento individual.</p>
+
+    <h3>Información de pago</h3>
+    <p>Las suscripciones PRO se procesan a través de la App Store de Apple y son gestionadas por <strong>RevenueCat</strong>. Sugoi nunca tiene acceso a tu información de tarjeta de crédito o método de pago — solo recibimos confirmación del estado de tu suscripción.</p>
+
+    <h2 id="how-we-use">3. Cómo usamos tu información</h2>
+    <p>Usamos la información que recopilamos exclusivamente para:</p>
+    <ul>
+      <li>Proporcionar las funciones de la Aplicación (organizar tus tareas, enviar recordatorios, sincronizar con tus dispositivos)</li>
+      <li>Procesar tus brain dumps usando inteligencia artificial (Claude de Anthropic) para convertirlos en tareas estructuradas</li>
+      <li>Transcribir notas de voz usando Whisper de OpenAI</li>
+      <li>Sincronizar eventos con tu Google Calendar si decides activar esa función</li>
+      <li>Comunicarnos contigo sobre actualizaciones, problemas técnicos o cambios al servicio</li>
+      <li>Detectar y prevenir fraude o abuso</li>
+    </ul>
+    <p><strong>Lo que NO hacemos:</strong> No vendemos tu información a terceros. No usamos tu contenido para entrenar modelos de inteligencia artificial. No mostramos publicidad. No transferimos tu información a terceros para sus propios fines comerciales.</p>
+
+    <h2 id="google">4. Integración con Google Calendar</h2>
+    <p>Esta sección describe en detalle cómo ment. usa los datos que obtiene a través de las APIs de Google, en cumplimiento de la <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>, incluidos los requisitos de Limited Use.</p>
+
+    <h3>Qué permiso solicitamos</h3>
+    <p>Si decides conectar tu cuenta de Google desde la pantalla de Ajustes, ment. solicita el siguiente alcance (scope) de OAuth 2.0:</p>
+    <ul>
+      <li><code>https://www.googleapis.com/auth/calendar.events</code> — para ver y editar eventos en tus calendarios</li>
+    </ul>
+
+    <h3>Para qué usamos este acceso</h3>
+    <p>Usamos este alcance <strong>exclusivamente</strong> para sincronizar tus tareas de ment. con tu calendario de Google de la siguiente manera:</p>
+    <ul>
+      <li><strong>Crear:</strong> Cuando creas una tarea con fecha y hora en ment., creamos un evento correspondiente en tu calendario principal de Google.</li>
+      <li><strong>Actualizar:</strong> Cuando editas una tarea (cambias el título, la fecha o la hora), actualizamos el evento correspondiente en Google Calendar.</li>
+      <li><strong>Eliminar:</strong> Cuando borras o marcas como completada una tarea con sincronización activa, eliminamos el evento correspondiente de Google Calendar.</li>
+    </ul>
+    <p>ment. solo modifica eventos que la propia Aplicación creó. No leemos, modificamos ni eliminamos eventos creados por ti directamente en Google Calendar o por otras aplicaciones.</p>
+
+    <h3>Cómo manejamos los tokens de acceso</h3>
+    <ul>
+      <li>Usamos el flujo OAuth 2.0 con PKCE estándar para iOS, sin client secret en el dispositivo</li>
+      <li>Los tokens de acceso y refresh se almacenan cifrados en reposo en nuestra base de datos de Supabase, asociados únicamente a tu cuenta</li>
+      <li>Solo nuestro Edge Function autenticado puede leer los tokens, y exclusivamente para realizar la sincronización en tu nombre</li>
+      <li>Puedes desconectar tu cuenta de Google en cualquier momento desde la pantalla de Ajustes. Al hacerlo, eliminamos tus tokens y revocamos el acceso de ment. a tu Google Calendar</li>
+    </ul>
+
+    <h3>Compromiso de Limited Use</h3>
+
+    <div class="callout">
+      <div class="callout-label">Google Limited Use Disclosure</div>
+      <p>El uso por parte de ment. de la información recibida desde las APIs de Google se ajustará a la <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>, incluidos los requisitos de Limited Use.</p>
+
+      <em class="lang">Versión en inglés (requerida por Google)</em>
+      <p>ment.'s use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+    </div>
+
+    <p>En particular, esto significa que:</p>
+    <ul>
+      <li>Solo usamos los datos de tu Google Calendar para proporcionar y mejorar la función de sincronización visible para ti dentro de la Aplicación</li>
+      <li><strong>No transferimos</strong> los datos de tu Google Calendar a terceros, excepto cuando sea estrictamente necesario para proporcionar el servicio (por ejemplo, almacenamiento cifrado en Supabase), para cumplir con la ley aplicable, o como parte de una fusión, adquisición o venta de activos con notificación previa</li>
+      <li><strong>No usamos</strong> los datos de Google Calendar para fines publicitarios</li>
+      <li><strong>No usamos</strong> los datos de Google Calendar para entrenar modelos de inteligencia artificial generalizados</li>
+      <li><strong>No permitimos</strong> que ningún humano lea los datos de tu Google Calendar, excepto: (a) con tu consentimiento explícito, (b) por razones de seguridad (por ejemplo, investigar abuso), (c) para cumplir con la ley aplicable, o (d) cuando los datos hayan sido agregados y anonimizados de tal forma que ya no te identifiquen</li>
+    </ul>
+
+    <h3>Cómo revocar el acceso</h3>
+    <p>Puedes revocar el acceso de ment. a tu Google Calendar en cualquier momento de las siguientes formas:</p>
+    <ul>
+      <li>Desde Ajustes en la Aplicación → Google Calendar → Desconectar</li>
+      <li>Desde tu cuenta de Google: <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">myaccount.google.com/permissions</a> → seleccionar ment. → Quitar acceso</li>
+    </ul>
+
+    <h2 id="third-parties">5. Servicios de terceros</h2>
+    <p>ment. usa los siguientes proveedores para operar el servicio. Cada uno tiene su propia política de privacidad:</p>
+    <ul>
+      <li><strong>Supabase</strong> — base de datos, autenticación y almacenamiento. <a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a></li>
+      <li><strong>Anthropic (Claude)</strong> — procesamiento de IA para organizar tus brain dumps. Anthropic no usa los datos de la API para entrenamiento. <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">anthropic.com/legal/privacy</a></li>
+      <li><strong>OpenAI (Whisper)</strong> — transcripción de audio. OpenAI no usa datos de la API para entrenamiento. <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">openai.com/policies/privacy-policy</a></li>
+      <li><strong>Google</strong> — autenticación con Google Sign In y Google Calendar API. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></li>
+      <li><strong>Apple</strong> — autenticación con Apple Sign In, App Store y procesamiento de pagos. <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">apple.com/legal/privacy</a></li>
+      <li><strong>RevenueCat</strong> — gestión de suscripciones. <a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">revenuecat.com/privacy</a></li>
+      <li><strong>Expo</strong> — push notifications. <a href="https://expo.dev/privacy" target="_blank" rel="noopener">expo.dev/privacy</a></li>
+    </ul>
+
+    <h2 id="retention">6. Retención y eliminación de datos</h2>
+    <p>Conservamos tu información mientras tu cuenta esté activa. Cuando eliminas tu cuenta:</p>
+    <ul>
+      <li>Tus tareas, listas, recordatorios y notas se eliminan permanentemente en un plazo máximo de 30 días</li>
+      <li>Tus tokens de Google se revocan inmediatamente y se eliminan de nuestra base de datos</li>
+      <li>Conservamos registros mínimos por hasta 90 días cuando sea necesario para cumplir con obligaciones legales, resolver disputas o prevenir fraude</li>
+    </ul>
+    <p>Para eliminar tu cuenta, ve a Ajustes → Cuenta → Eliminar cuenta dentro de la Aplicación, o escríbenos a <a href="mailto:eric@sugoi.mx">eric@sugoi.mx</a>.</p>
+
+    <h2 id="rights">7. Tus derechos</h2>
+    <p>Dependiendo de tu jurisdicción, puedes tener los siguientes derechos sobre tu información personal:</p>
+    <ul>
+      <li><strong>Acceso:</strong> solicitar una copia de la información que tenemos sobre ti</li>
+      <li><strong>Rectificación:</strong> corregir información inexacta</li>
+      <li><strong>Eliminación:</strong> solicitar el borrado de tu información</li>
+      <li><strong>Portabilidad:</strong> recibir tu información en un formato estructurado</li>
+      <li><strong>Oposición:</strong> oponerte a determinados usos de tu información</li>
+    </ul>
+    <p>Para ejercer estos derechos, escríbenos a <a href="mailto:eric@sugoi.mx">eric@sugoi.mx</a>. Responderemos dentro de un plazo razonable y en cualquier caso dentro de 30 días.</p>
+
+    <h2 id="security">8. Seguridad</h2>
+    <p>Implementamos medidas técnicas y organizativas razonables para proteger tu información:</p>
+    <ul>
+      <li>Cifrado en tránsito (TLS 1.2+) para todas las comunicaciones entre la Aplicación y nuestros servidores</li>
+      <li>Cifrado en reposo para tokens de OAuth y datos sensibles en Supabase</li>
+      <li>Autenticación obligatoria mediante Apple Sign In, Google Sign In o magic link de correo</li>
+      <li>Acceso restringido a la base de datos basado en políticas Row Level Security de Supabase</li>
+      <li>Revisión periódica de accesos y permisos del equipo</li>
+    </ul>
+    <p>Ningún sistema es 100% seguro. Si detectamos una brecha que afecte tu información, te notificaremos según lo requiera la ley aplicable.</p>
+
+    <h2 id="children">9. Menores de edad</h2>
+    <p>ment. no está dirigido a menores de 13 años. No recopilamos a sabiendas información personal de niños menores de 13 años. Si descubrimos que hemos recopilado información de un menor de 13 años, la eliminaremos de inmediato. Si crees que un menor nos ha proporcionado información, escríbenos a <a href="mailto:eric@sugoi.mx">eric@sugoi.mx</a>.</p>
+
+    <h2 id="changes">10. Cambios a esta política</h2>
+    <p>Podemos actualizar esta Política de Privacidad ocasionalmente. Cuando lo hagamos, actualizaremos la fecha al inicio del documento y, si los cambios son significativos, te notificaremos dentro de la Aplicación o por correo electrónico antes de que entren en vigor. Te recomendamos revisar esta política periódicamente.</p>
+
+    <h2 id="contact">11. Contacto</h2>
+    <p>Si tienes preguntas, comentarios o solicitudes relacionadas con esta Política de Privacidad o con tus datos, escríbenos:</p>
+    <ul>
+      <li><strong>Correo:</strong> <a href="mailto:eric@sugoi.mx">eric@sugoi.mx</a></li>
+      <li><strong>Sitio web:</strong> <a href="https://ment-ai.app">ment-ai.app</a></li>
+      <li><strong>Operador:</strong> Sugoi, México</li>
+    </ul>
+
+  </article>
+
+  <footer>
+    <a href="https://ment-ai.app">Inicio</a>
+    <a href="https://legal.ment-ai.app/terms.html">Términos</a>
+    <a href="https://legal.ment-ai.app/support.html">Soporte</a>
+    <br/><br/>
+    © 2026 Sugoi. Todos los derechos reservados.
+  </footer>
 </div>
-
-<footer>
-  © 2025 Sugoi · <a href="/terms.html">Términos de Servicio</a> · <a href="/support.html">Soporte</a>
-</footer>
 
 </body>
 </html>
